@@ -70,10 +70,17 @@ Display::Display(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    Mat inMat = imread("Lenna.jpg");
+    Mat inMat = imread("/home/arianna/workshop/Qt/displayImage/quadcopter.jpg");
     QImage image = cvMatToQImage(inMat);
+    QPixmap pix = QPixmap::fromImage(image);
 
-    ui->lblImage->setPixmap(QPixmap::fromImage(image));
+//    ui->lblImage->setPixmap(pix);
+
+    ui->txtDisplay->setText("What up!");
+    if(inMat.data == NULL)
+         ui->lblImage->setText("cannot read the image");
+    else
+        ui->lblImage->setPixmap(pix);
 
 
 }

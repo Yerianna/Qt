@@ -15,8 +15,19 @@ public:
     explicit UIbyCode(QWidget *parent = 0);
     ~UIbyCode();
 
+private slots:
+    void on_btnHelllo_clicked();
+
+    void on_btnBye_clicked();
+
 private:
     Ui::UIbyCode *ui;
+
+    QImage img;
+
+
+
+
 };
 
 #endif // UIBYCODE_H

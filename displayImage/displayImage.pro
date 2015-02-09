@@ -39,3 +39,6 @@ INCLUDEPATH += /usr/local/include/opencv2/contrib
 INCLUDEPATH += /opt/ros/indigo/include
 
 LIBS += `pkg-config opencv --cflags --libs`
+
+DISTFILES += \
+    Lenna.jpg

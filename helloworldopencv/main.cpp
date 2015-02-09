@@ -10,7 +10,7 @@ using namespace std;
 int main(int argc, char *argv[])
 {
     Mat image;
-        image = imread("Lenna.jpg");   // Read the file
+        image = imread("/home/arianna/workshop/Qt/Lenna.jpg");   // Read the file
         if(!image.data)
         {
             cout << "where's the image!";
