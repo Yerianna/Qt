@@ -6,6 +6,7 @@
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
 
+
 namespace Ui {
 class Display;
 }
@@ -24,6 +25,9 @@ private:
 public slots:
     QImage cvMatToQImage( const cv::Mat &inMat );
 
+private slots:
+    void on_lblImage_clicked();
+    void on_lblImage_released();
 };
 
 #endif // DISPLAY_H

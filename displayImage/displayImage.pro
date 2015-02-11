@@ -14,10 +14,10 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         display.cpp \
-    imageconverter.cpp
+    widget.cpp
 
 HEADERS  += display.h \
-    imageconverter.h
+    widget.h
 
 FORMS    += display.ui
 
@@ -36,7 +36,7 @@ INCLUDEPATH += /usr/local/include/opencv2/objdetect
 INCLUDEPATH += /usr/local/include/opencv2/calib3d
 INCLUDEPATH += /usr/local/include/opencv2/ml
 INCLUDEPATH += /usr/local/include/opencv2/contrib
-INCLUDEPATH += /opt/ros/indigo/include
+#INCLUDEPATH += /opt/ros/indigo/include
 
 LIBS += `pkg-config opencv --cflags --libs`
 

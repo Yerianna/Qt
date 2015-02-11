@@ -10,6 +10,8 @@
 
 #include <math.h>
 
+#include <widget.h>
+
 
 
 using namespace cv;
@@ -76,11 +78,18 @@ Display::Display(QWidget *parent) :
 
 //    ui->lblImage->setPixmap(pix);
 
+
+
     ui->txtDisplay->setText("What up!");
-    if(inMat.data == NULL)
-         ui->lblImage->setText("cannot read the image");
+    if(inMat.data == NULL){}
+ //        ui->lblImage->setText("cannot read the image");
     else
-        ui->lblImage->setPixmap(pix);
+     {   ui->lblImage->setPixmap(pix);
+        ui->lblImage->resize(pix.size());
+
+    }
+
+    connect(ui->lblImage, SIGNAL(pressed()), this, SLOT(on_lblImage_clicked()));
 
 
 }
@@ -90,3 +99,16 @@ Display::~Display()
     delete ui;
 }
 
+
+void Display::on_lblImage_clicked()
+{
+    ui->txtDisplay->setText("lblImage clicked~");
+
+}
+
+void Display::on_lblImage_released()
+{
+    ui->txtDisplay->setText("lblImage released~");
+//    ui->lblSaved->setText(QString::number(ui->lblImage->getSelectionRect().width()));
+    ui->lblSaved->setPixmap(ui->lblImage->pixmap()->copy(ui->lblImage->getSelectionRect()));
+}
