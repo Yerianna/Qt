@@ -9,7 +9,7 @@
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
 
-#include "controller.cpp"
+//#include "controller.cpp"
 
 using namespace cv;
 
@@ -85,7 +85,7 @@ private slots:
 private:
     Ui::MainWindow *ui;
 
-    controller controls;
+    //controller controls;
 
     Mat MatOriginal;
     Mat MatCropped;

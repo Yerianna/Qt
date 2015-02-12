@@ -6,7 +6,7 @@
 #include <opencv2/imgproc/imgproc.hpp>
 #include <iostream>
 #include <QtWidgets>
-#include "controller.cpp"
+//#include "controller.cpp"
 
 using namespace cv;
 using namespace std;
@@ -17,9 +17,9 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    controls.Init(0);
+ //   controls.Init(0);
 
-    ui->lblStatus->setText("Battery is :"+ QString::number(controls.getBattery()));
+    ui->lblStatus->setText("Battery is :"+ QString::number(3));
 
 
 
@@ -148,3 +148,11 @@ void MainWindow::on_btnEmergOrRegular_clicked()
 {
 
 }
+
+void MainWindow::updateGUI(){}
+
+void MainWindow::updateOriginal(Mat original ){}
+
+void MainWindow::updateCropped(Mat cropped){}
+
+void MainWindow::updateResultMatching(Mat resultMatching){}
